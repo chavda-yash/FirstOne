@@ -1,0 +1,1924 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width" />
+    <!-- Forcing initial-scale shouldn't be necessary -->
+
+    <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting" />
+    <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title></title>
+    <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+    <!-- Web Font / @font-face : BEGIN -->
+    <!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]> <![endif]-->
+
+    <!--[if gt mso 15]>
+      <style type="text/css" media="all">
+        /Outlook 2016 Height Fix / table,
+        tr,
+        td {
+          border-collapse: collapse;
+        }
+        tr {
+          font-size: 0px;
+          line-height: 0px;
+          border-collapse: collapse;
+        }
+      </style>
+    <![endif]-->
+
+    <!--[if (gte mso 9)|(IE)]>
+      <style type="text/css">
+        table {
+          border-collapse: collapse;
+          border-spacing: 0;
+          mso-line-height-rule: exactly;
+          mso-margin-bottom-alt: 0;
+          mso-margin-top-alt: 0;
+          mso-table-lspace: 0pt;
+          mso-table-rspace: 0pt;
+        }
+      </style>
+    <![endif]-->
+
+    <!-- CSS Reset -->
+    <style>
+      /* What it does: Remove spaces around the email design added by some email clients. */
+      /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+
+      .em_width20 {
+        width: 20px !important;
+      }
+      .em_footer {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #444444;
+        font-weight: normal !important;
+      }
+      .em_footer a {
+        text-decoration: none;
+        color: #444444;
+        float: left;
+        font-size: 14px !important;
+      }
+      .em_footer span {
+        float: left;
+      }
+
+      /* provide some minimal visual accomodation for IE8 and below */
+      .TFtable tr:nth-child(odd) {
+        background-color: #ccc;
+      }
+      .nocolor {
+        background: none !important;
+        background-color: transparent !important;
+      }
+
+      /*  Define the background color for all the ODD background rows  */
+      .TFtable tr:nth-child(odd) {
+        background: #ffffff;
+      }
+      /*  Define the background color for all the EVEN background rows  */
+      .TFtable tr:nth-child(even) {
+        background: #f7f7f7;
+      }
+      p {
+        font-weight: normal;
+      }
+
+      /* What it does: Stops Outlook from adding extra spacing to tables. */
+      * {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+      /* What it does: Centers email on Android 4.4 */
+      div[style*="margin: 16px 0"] {
+        margin: 0 !important;
+      }
+      /* What it does: Stops Outlook from adding extra spacing to tables. */
+      table {
+        border-spacing: 0 !important;
+        border-collapse: collapse !important;
+        table-layout: fixed !important;
+        margin: 0 auto !important;
+      }
+
+      th,
+      td,
+      tr {
+        padding: 0px !important;
+        border-spacing: 0px !important;
+        border-collapse: collapse !important;
+      }
+      table,
+      td {
+        mso-table-lspace: 0pt !important;
+        mso-table-rspace: 0pt !important;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      .align-left {
+        float: left;
+        display: inline !important;
+      }
+      .align-center {
+        float: left !important;
+        margin-left: 45px !important ;
+        /*_margin-left: 25px !important; */
+        display: inline !important;
+      }
+      .align-right {
+        float: right;
+        display: inline !important;
+      }
+      .ul_em {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+      /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+
+      /* What it does: Uses a better rendering method when resizing images in IE. */
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+      /* What it does: A work-around for iOS meddling in triggered links. */
+      *[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+      /* What it does: A work-around for Gmail meddling in triggered links. */
+      .x-gmail-data-detectors,
+      .x-gmail-data-detectors *,
+      .aBn {
+        border-bottom: 0 !important;
+        cursor: default !important;
+      }
+      /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+      .a6S {
+        display: none !important;
+        opacity: 0.01 !important;
+      }
+      /* If the above doesn't work, add a .g-img class to any image in question. */
+      img.g-img + div {
+        display: none !important;
+      }
+      .center-c {
+        border: 1px #999999 solid !important;
+        border: 1px #999999 solid;
+      }
+      /* What it does: Prevents underlining the button text in Windows 10 */
+      .button-link {
+        text-decoration: none !important;
+      }
+      .main_padding {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+      .main_padding_b {
+        padding-left: 38px !important;
+        padding-right: 38px !important;
+        padding-left: 38px;
+        padding-right: 38px;
+      }
+      .main_padding_table {
+        padding-left: 55px !important;
+        padding-right: 55px !important;
+        padding-left: 55px;
+        padding-right: 55px;
+      }
+      .no_padding {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+      /* Create one of these media queries for each additional viewport size you'd like to fix */
+      /* Thanks to Eric Lepetit @ericlepetitsf) for help troubleshooting */
+
+      /* FONTS */
+      .alink {
+        color: #cc0033;
+        color: #cc0033 !important;
+      }
+      .title_font_a {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-size: 14px !important;
+        color: #444444;
+        color: #444444 !important;
+        line-height: 23px;
+        letter-spacing: 2px;
+        font-weight: normal !important;
+      }
+      .normal_font_3 {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-size: 16px !important;
+        color: #444444;
+        color: #444444 !important;
+        line-height: 18px;
+        font-weight: normal !important;
+      }
+      .normal_font_6 {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        font-size: 12px !important;
+        color: #5d5e5e;
+        color: #5d5e5e !important;
+        line-height: 18px;
+        font-weight: normal !important;
+      }
+      .normal_font_6 a {
+        color: #113c62;
+        color: #113c62 !important;
+      }
+      .normal_font_5 {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-size: 14px !important;
+        color: #000001;
+        color: #000001 !important;
+        line-height: 16px;
+        font-weight: normal !important;
+      }
+      .normal_font_3 a {
+        color: #0071af;
+        color: #0071af !important;
+      }
+      .normal_title {
+        font-family: Arial, sans-serif !important;
+        font-size: 22px !important;
+        font-family: Arial, sans-serif;
+        font-size: 22px;
+        color: #444444;
+        font-weight: 300 !important;
+      }
+      .header_title {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        font-weight: normal !important;
+        color: #000001;
+      }
+      .normal_title-2 {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: normal !important;
+        color: #444444;
+      }
+
+      .title_font {
+        font-family: Arial, sans-serif;
+        font-size: 36px;
+        color: #00b2be;
+        color: #00b2be !important;
+        font-weight: 300 !important;
+      }
+      .title_font_2 {
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        color: #00b2be;
+        color: #00b2be !important;
+        font-weight: 300 !important;
+      }
+      .normal_font_white {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-size: 16px !important;
+        color: #ffffff;
+        color: #ffffff !important;
+        line-height: 18px;
+        font-weight: normal !important;
+      }
+      .normal_font_white_2 {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-size: 14px !important;
+        color: #ffffff;
+        color: #ffffff !important;
+        line-height: 16px;
+        font-weight: normal !important;
+      }
+      .normal_font_white_3 {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        font-size: 18px !important;
+        color: #ffffff;
+        color: #ffffff !important;
+        line-height: 20px;
+        font-weight: normal !important;
+      }
+      .title_font_white_a {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-size: 14px !important;
+        color: #ffffff;
+        color: #ffffff !important;
+        line-height: 23px;
+        letter-spacing: 2px;
+        font-weight: normal !important;
+      }
+      .title_font_white {
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        color: #ffffff;
+        color: #ffffff !important;
+        font-weight: 300 !important;
+      }
+      .center-on-narrow {
+        text-align: center !important;
+        display: block !important;
+        float: none !important;
+      }
+      .center-on-narrow1 {
+        text-align: center !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: none !important;
+      }
+      .center-on-narrow1 {
+        text-align: center !important;
+        display: block !important;
+        float: none !important;
+      }
+
+      /* What it does: Hover styles for buttons */
+      .button-td,
+      .button-a {
+        transition: all 100ms ease-in;
+      }
+      .button-td:hover,
+      .button-a:hover {
+        background: #555555 !important;
+        border-color: #555555 !important;
+      }
+
+      .underline {
+        text-decoration: underline !important;
+        color: #000000 !important;
+      }
+      .underline1 {
+        text-decoration: underline !important;
+        color: #000001 !important;
+      }
+      .nounderline {
+        text-decoration: none !important;
+        color: #ffffff !important;
+      }
+      .nounderline_black {
+        text-decoration: none !important;
+        color: #000001 !important;
+      }
+      .font_color_grey {
+        font-family: Arial, sans-serif !important;
+        font-size: 14px !important;
+        line-height: 16px !important;
+        color: #000001 !important;
+      }
+
+      @media screen and (max-width: 480px) {
+        .td_a {
+          width: 15% !important;
+        }
+        .td_b {
+          width: 85% !important;
+        }
+        .td_c {
+          width: 35% !important;
+        }
+        .td_d {
+          width: 65% !important;
+        }
+        .img_header {
+          padding-top: 20px !important;
+        }
+        .header_title {
+          text-align: center;
+        }
+        .main_padding {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+        }
+        .main_padding_table {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+        }
+
+        .main_padding_b {
+          padding-left: 0px !important;
+          padding-right: 0px !important;
+        }
+        body {
+          margin: 0px !important;
+        }
+        .center-c {
+          min-width: 105px !important;
+          border: 0px !important;
+        }
+        .center-c2 {
+          min-width: 105px !important;
+        }
+        .normal_font_3 {
+          font-family: Arial, sans-serif;
+          font-size: 16px;
+          font-size: 16px !important;
+          color: #444444;
+          color: #444444 !important;
+          line-height: 23px;
+          font-weight: normal !important;
+        }
+        .ul_em {
+          margin-top: 0px;
+          margin-bottom: 0px;
+          padding-top: 0px;
+          padding-bottom: 0px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        .title_font {
+          font-family: Arial, sans-serif;
+          font-size: 28px !important;
+        }
+
+        .email-container {
+          min-width: 320px !important;
+        }
+        .em_button {
+          width: 100% !important;
+        }
+
+        .align-left {
+          float: left;
+        }
+        .align-center {
+          float: left;
+          margin-left: 0px !important;
+        }
+        .align-right {
+          float: left;
+        }
+        /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+        .fluid {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+
+        /* What it does: Forces table cells into full-width rows. */
+        .stack-column,
+        .stack-column-center {
+          display: block !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          direction: ltr !important;
+          float: left !important;
+          text-align: left;
+        }
+        /* And center justify these ones. */
+        .stack-column-center {
+          text-align: center !important;
+        }
+
+        /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+        .center-on-narrow {
+          text-align: center !important;
+          display: block !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          float: none !important;
+        }
+        table.center-on-narrow {
+          display: inline-block !important;
+        }
+        .table_responsive {
+          max-width: 100% !important;
+          min-width: 100% !important;
+          width: 100%;
+        }
+        .table_responsive_2 {
+          max-width: 50% !important;
+          min-width: 50% !important;
+          width: 50%;
+        }
+        .img-responsive {
+          min-width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+        }
+        .em_hide {
+          display: none;
+          display: none !important;
+          width: 1px !important;
+        }
+        .em_footer a {
+          width: 100%;
+          float: left;
+        }
+        .em_footer span {
+          width: 100%;
+          float: left;
+          padding-bottom: 10px;
+        }
+        .em_footer {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+          font-size: 14px !important;
+        }
+        .em_footer_sep {
+          border-top: 1px solid #ccc;
+        }
+        .em_hide_full {
+          display: block !important;
+        }
+        .em_hide_full {
+          display: none;
+        }
+        .full_sep {
+          border-top: 1px solid #ccc;
+        }
+        .center-on-narrow2 {
+          text-align: center !important;
+          display: block !important;
+          float: none !important;
+        }
+        .center-on-narrow2 {
+          text-align: center !important;
+          display: block !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          float: none !important;
+        }
+        .super_s {
+          font-size: 60%;
+          vertical-align: top;
+          content: "+";
+        }
+
+        .tab_1 {
+          width: 2% !important;
+        }
+        .tab_2 {
+          width: 55% !important;
+        }
+        .tab_3 {
+          width: 23% !important;
+        }
+        .tab_4 {
+          width: 20% !important;
+        }
+        .tab_1b {
+          width: 3% !important;
+        }
+        .tab_2b {
+          width: 97% !important;
+        }
+        .tab_3b {
+          width: 0% !important;
+        }
+        u + .body {
+          min-width: 100vw;
+        }
+        .paddingLR10 {
+          padding-left: 10px !important;
+          padding-right: 10px !important;
+        }
+        .vertical_align {
+          vertical-align: top !important;
+          padding-top: 14px !important;
+        }
+        .align_text_Center {
+          text-align: center !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body
+    bgcolor="#EEEEEE"
+    style="margin: 0; mso-line-height-rule: exactly"
+    width="100%"
+  >
+    <center style="width: 100%; text-align: left">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td bgcolor="#EEEEEE" align="center">
+            <!--[if mso]>
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" width="650">
+<tr>
+<td align="center" valign="top" width="650">
+<![endif]-->
+            <table
+              role="presentation"
+              cellspacing="0"
+              cellpadding="0"
+              border="0"
+              align="center"
+              class="center-c2"
+              width="650"
+              style="
+                width: 100%;
+                max-width: 650px;
+                min-width: 650px;
+                margin: auto;
+              "
+              bgcolor="#FFFFFF"
+            >
+              <!-- LOGO : BEGIN -->
+              <tr>
+                <td height="100%" valign="top" width="100%" align="">
+                  <table
+                    cellpadding="0"
+                    cellspacing="0"
+                    width="100%"
+                    style="
+                      background-color: #eeeeee;
+                      border: 1px solid transparent;
+                      min-width: 100%;
+                    "
+                    class="stylingblock-content-wrapper"
+                  >
+                    <tr>
+                      <td
+                        style="padding: 0px"
+                        class="stylingblock-content-wrapper camarker-inner"
+                      >
+                        <table
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          style="max-width: 650px"
+                          width="100%"
+                        >
+                          <tr>
+                            <td
+                              height="10"
+                              style="
+                                font-size: 1px;
+                                line-height: 1px;
+                                border-collapse: collapse;
+                              "
+                            >
+                              <img
+                                alt=""
+                                border="0"
+                                height="1"
+                                src="http://image.exct.net/lib/fe6215707c62007e7512/m/1/5bf4439e-0942-4d78-9474-cbc1f0628c0d.gif"
+                                style="
+                                  display: block;
+                                  border: 0px !important;
+                                  outline: none !important;
+                                "
+                                width="1"
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center">
+                              %%[ IF NOT _MessageContext == "VAWP" AND NOT
+                              _MessageContext == "Social" AND NOT
+                              _MessageContext == "FTAF" THEN ]%%<span
+                                class="normal_font_5"
+                                >Can't see this properly?
+                                <a
+                                  alias=""
+                                  class="underline1"
+                                  conversion="false"
+                                  data-linkto="other"
+                                  href="%%view_email_url%%"
+                                  style="
+                                    color: #000001 !important;
+                                    text-decoration: underline;
+                                  "
+                                  title=""
+                                  >View it online</a
+                                ></span
+                              >%%[Endif]%%
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              height="10"
+                              style="
+                                font-size: 1px;
+                                line-height: 1px;
+                                border-collapse: collapse;
+                                border-right: 0px;
+                                border-left: 0px;
+                              "
+                            >
+                              <img
+                                alt=""
+                                border="0"
+                                height="1"
+                                src="http://image.exct.net/lib/fe6215707c62007e7512/m/1/5bf4439e-0942-4d78-9474-cbc1f0628c0d.gif"
+                                style="
+                                  display: block;
+                                  border: 0px !important;
+                                  outline: none !important;
+                                "
+                                width="1"
+                              />
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- LOGO : END -->
+
+              <!-- LOGO : BEGIN -->
+              <tr>
+                <td height="100%" valign="top" width="100%" align="">
+                  <table
+                    width="100%"
+                    cellspacing="0"
+                    cellpadding="0"
+                    role="presentation"
+                    style="
+                      max-width: 650px;
+                      background-color: #0073cf;
+                      mso-border-alt: 30px solid #0073cf;
+                      border: 30px solid #0073cf;
+                    "
+                  >
+                    <tr>
+                      <td align="right">
+                        <a
+                          href="https://view.com.au/"
+                          title="View.com.au"
+                          alias=""
+                          conversion="false"
+                          data-linkto="https://"
+                          ><img
+                            data-assetid="332389"
+                            src="https://image.email.view.com.au/lib/fe39157075640474771175/m/1/5e829213-e056-47b3-a843-dbf7adecef76.png"
+                            alt=""
+                            height="32"
+                            width="125"
+                            style="
+                              display: block;
+                              padding-right: 20px;
+                              text-align: right;
+                              height: 32px;
+                              width: 125px;
+                              border: 0px;
+                            "
+                        /></a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- LOGO : END -->
+
+              <!-- Nav : BEGIN -->
+              <!-- Nav : END -->
+
+              <!-- Email Body : BEGIN -->
+
+              <tr>
+                <td>
+                  <table
+                    cellpadding="0"
+                    cellspacing="0"
+                    width="100%"
+                    style="min-width: 100%"
+                    class="stylingblock-content-wrapper"
+                  >
+                    <tr>
+                      <td class="stylingblock-content-wrapper camarker-inner">
+                        <table
+                          bgcolor="#ffffff"
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          style="max-width: 650px; background-color: #ffffff"
+                          width="100%"
+                        >
+                          <tr>
+                            <td
+                              class="main_padding"
+                              style="padding-left: 25px; padding-right: 25px"
+                            >
+                              <table
+                                align="center"
+                                border="0"
+                                cellpadding="0"
+                                cellspacing="0"
+                                class="table_responsive"
+                                role="presentation"
+                                width="90%"
+                              >
+                                <tr>
+                                  <td
+                                    height="20"
+                                    style="
+                                      font-size: 1px;
+                                      line-height: 1px;
+                                      border-collapse: collapse;
+                                    "
+                                  >
+                                    <img
+                                      alt=""
+                                      border="0"
+                                      height="1"
+                                      src="http://image.exct.net/lib/fe6215707c62007e7512/m/1/5bf4439e-0942-4d78-9474-cbc1f0628c0d.gif"
+                                      style="
+                                        display: block;
+                                        border: 0px !important;
+                                        outline: none !important;
+                                      "
+                                      width="1"
+                                    />
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td align="center" valign="top">
+                                    <table
+                                      align="center"
+                                      border="0"
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      class="table_responsive stack-column-center"
+                                      width="100%"
+                                    >
+                                      <tr>
+                                        <td>
+                                          <p
+                                            align="left"
+                                            style="
+                                              font-family: Arial, sans-serif;
+                                              font-size: 14px;
+                                              line-height: 22px;
+                                              color: #000001;
+                                              font-weight: normal;
+                                            "
+                                            valign="middle"
+                                          >
+                                            Your monthly update on market
+                                            information, based on a property you
+                                            follow on view.com.au<br />
+                                          </p>
+                                          <img
+                                            alt=""
+                                            border="0"
+                                            height="1"
+                                            src="http://image.exct.net/lib/fe6215707c62007e7512/m/1/5bf4439e-0942-4d78-9474-cbc1f0628c0d.gif"
+                                            style="
+                                              display: block;
+                                              border: 0px !important;
+                                              outline: none !important;
+                                            "
+                                            width="1"
+                                          />
+                                        </td>
+                                      </tr>
+                                      %%[ SET @DE =
+                                      'follow_property_alert_stats' SET @rows =
+                                      LookupOrderedRows(@DE,0,"PropertyAddress",
+                                      "SalesforceID", SalesforceID) SET
+                                      @InspectionRow = RowCount(@rows) For @i =
+                                      1 to @InspectionRow Do SET
+                                      @PropertyAddress = Field(Row(@rows, @i),
+                                      'PropertyAddress', '0') SET
+                                      @previousPriceRange = Field(Row(@rows,
+                                      @i), 'previousPriceRange', '0') SET
+                                      @currentPriceRange = Field(Row(@rows, @i),
+                                      'currentPriceRange', '0') SET @Confidence
+                                      = Field(Row(@rows, @i), 'Confidence', '0')
+                                      SET @HouseMedianPriceSale =
+                                      Field(Row(@rows, @i),
+                                      'HouseMedianPriceSale', '0') SET
+                                      @HouseMedianPriceRent = Field(Row(@rows,
+                                      @i), 'HouseMedianPriceRent', '0') SET
+                                      @ApartmentMedianPriceSale =
+                                      Field(Row(@rows, @i),
+                                      'ApartmentMedianPriceSale', '0') SET
+                                      @ApartmentMedianPriceRent =
+                                      Field(Row(@rows, @i),
+                                      'ApartmentMedianPriceRent', '0') SET
+                                      @HouseOnMarketPropertyCount =
+                                      Field(Row(@rows, @i),
+                                      'HouseOnMarketPropertyCount', '0') SET
+                                      @ApartmentOnMarketPropertyCount =
+                                      Field(Row(@rows, @i),
+                                      'AppartmentOnMarketPropertyCount', '0')
+                                      SET @SimilarHouseSoldCount =
+                                      Field(Row(@rows, @i),
+                                      'SimilarHouseSoldCount', '0') SET
+                                      @SimilarApartmentSoldCount =
+                                      Field(Row(@rows, @i),
+                                      'SimilarApartmentSoldCount', '0') SET
+                                      @PropertyURL = Field(Row(@rows, @i),
+                                      'PropertyURL', '0') SET @PropertyURLDecode
+                                      =
+                                      Replace(Replace(Replace(Replace(Replace(Replace(@PropertyURL,'%3A',':'),'%2F','/'),'%3F','?'),'%3D','='),'%20','+'),'%26','&')
+                                      ]%%
+
+                                      <tr>
+                                        <td
+                                          align="left"
+                                          style="
+                                            font-family: Arial, sans-serif;
+                                            font-size: 14px;
+                                            line-height: 22px;
+                                            color: #0073cf;
+                                            font-weight: normal;
+                                          "
+                                          valign="top"
+                                        >
+                                          <b> Property Address:</b>
+                                          <a
+                                            alias=""
+                                            conversion="false"
+                                            href="%%=RedirectTo(@PropertyURLDecode)=%%"
+                                            style="
+                                              color: #0073cf;
+                                              text-decoration: none;
+                                            "
+                                            title=""
+                                            ><b>%%=v(@PropertyAddress)=%%</b></a
+                                          >
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td
+                                          align="left"
+                                          style="
+                                            font-family: Arial, sans-serif;
+                                            font-size: 14px;
+                                            line-height: 22px;
+                                            color: #000001;
+                                            font-weight: normal;
+                                          "
+                                          valign="top"
+                                        >
+                                          <table
+                                            class="left"
+                                            style="
+                                              width: 100%;
+                                              table-layout: auto;
+                                            "
+                                          >
+                                            <tr style="height: 30px">
+                                              <th
+                                                style="
+                                                  padding-left: 10px;
+                                                  text-align: right;
+                                                  width: 30%;
+                                                "
+                                              ></th>
+                                              <th
+                                                style="
+                                                  padding-left: 10px;
+                                                  text-align: left;
+                                                  width: 25%;
+                                                "
+                                              ></th>
+                                            </tr>
+                                            %%[IF NOT empty(@currentPriceRange)
+                                            THEN]%%
+                                            <tr style="height: 30px">
+                                              <td
+                                                style="
+                                                  padding-right: 10px;
+                                                  padding-left: 10px;
+                                                  text-align: left;
+                                                "
+                                              >
+                                                Current price estimate:
+                                              </td>
+                                              <td
+                                                style="
+                                                  word-wrap: normal;
+                                                  padding-right: 10px;
+                                                  text-align: left;
+                                                "
+                                              >
+                                                %%=v(@currentPriceRange)=%%
+                                              </td>
+                                            </tr>
+                                            %%[ ENDIF ]%% %%[IF NOT
+                                            empty(@previousPriceRange) THEN]%%
+                                            <tr style="height: 30px">
+                                              <td
+                                                style="
+                                                  padding-right: 10px;
+                                                  padding-left: 10px;
+                                                  text-align: left;
+                                                "
+                                              >
+                                                Previous price estimate:
+                                              </td>
+                                              <td
+                                                style="
+                                                  word-wrap: normal;
+                                                  padding-right: 10px;
+                                                  padding-left: 10px;
+                                                  text-align: left;
+                                                "
+                                              >
+                                                %%=v(@previousPriceRange)=%%
+                                              </td>
+                                            </tr>
+                                            %%[ ENDIF ]%%
+                                            <tr style="height: 30px">
+                                              <td
+                                                style="
+                                                  padding-right: 10px;
+                                                  padding-left: 10px;
+                                                  text-align: left;
+                                                "
+                                              >
+                                                Confidence in price estimate:
+                                              </td>
+                                              <td
+                                                style="
+                                                  word-wrap: normal;
+                                                  padding-right: 10px;
+                                                  text-align: left;
+                                                "
+                                              >
+                                                <a
+                                                  alias=""
+                                                  conversion="false"
+                                                  href="https://view.com.au/cl-avm-confidence-indicator/"
+                                                  style="
+                                                    color: #000001;
+                                                    text-decoration: none;
+                                                  "
+                                                  title=""
+                                                  >%%=v(@Confidence)=%%
+                                                </a>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                          <table
+                                            class="left"
+                                            style="
+                                              border-spacing: 10px;
+                                              width: 100%;
+                                              text-align: left;
+                                              table-layout: auto;
+                                            "
+                                          >
+                                            <tr>
+                                              <td align="center">
+                                                <img
+                                                  alt=""
+                                                  src="https://image.email.view.com.au/lib/fe39157075640474771175/m/1/b7252499-9e1c-42d8-ab81-ae5542dc9b75.png"
+                                                />
+                                              </td>
+                                            </tr>
+                                          </table>
+
+                                          <table
+                                            class="left"
+                                            style="
+                                              border-spacing: 30px;
+                                              width: 100%;
+                                              text-align: left;
+                                              table-layout: auto;
+                                            "
+                                          >
+                                            <tr style="height: 30px">
+                                              <th
+                                                style="
+                                                  padding-right: 10px;
+                                                  padding-left: 10px;
+                                                  text-align: left;
+                                                  width: 50%;
+                                                "
+                                              ></th>
+                                              <th
+                                                style="
+                                                  padding-right: 10px;
+                                                  padding-left: 10px;
+                                                  text-align: left;
+                                                  width: 25%;
+                                                "
+                                              >
+                                                House
+                                              </th>
+                                              <th
+                                                style="
+                                                  padding-right: 10px;
+                                                  padding-left: 10px;
+                                                  text-align: left;
+                                                  width: 25%;
+                                                "
+                                              >
+                                                Apartment
+                                              </th>
+                                            </tr>
+                                            <tr style="height: 30px">
+                                              <td
+                                                style="
+                                                  padding-right: 10px;
+                                                  padding-left: 10px;
+                                                  text-align: left;
+                                                "
+                                              >
+                                                Median Sale Price
+                                              </td>
+                                              <td
+                                                style="
+                                                  word-wrap: normal;
+                                                  padding-right: 10px;
+                                                  padding-left: 10px;
+                                                  text-align: center;
+                                                "
+                                              >
+                                                %%=v(@HouseMedianPriceSale)=%%
+                                              </td>
+                                              <td
+                                                style="
+                                                  word-wrap: normal;
+                                                  padding-right: 10px;
+                                                  padding-left: 10px;
+                                                  text-align: center;
+                                                "
+                                              >
+                                                %%=v(@ApartmentMedianPriceSale)=%%
+                                              </td>
+                                            </tr>
+                                            <tr style="height: 30px">
+                                              <td
+                                                style="
+                                                  padding-right: 10px;
+                                                  padding-left: 10px;
+                                                "
+                                              >
+                                                Median Rental Price
+                                              </td>
+                                              <td
+                                                style="
+                                                  word-wrap: normal;
+                                                  padding-right: 10px;
+                                                  padding-left: 10px;
+                                                  text-align: center;
+                                                "
+                                              >
+                                                %%=v(@HouseMedianPriceRent)=%%
+                                              </td>
+                                              <td
+                                                style="
+                                                  word-wrap: normal;
+                                                  padding-right: 10px;
+                                                  padding-left: 10px;
+                                                  text-align: center;
+                                                "
+                                              >
+                                                %%=v(@ApartmentMedianPriceRent)=%%
+                                              </td>
+                                            </tr>
+                                            <tr style="height: 30px">
+                                              <td
+                                                style="
+                                                  padding-right: 10px;
+                                                  padding-left: 10px;
+                                                "
+                                              >
+                                                Number of properties on market
+                                              </td>
+                                              <td
+                                                style="
+                                                  word-wrap: normal;
+                                                  padding-right: 10px;
+                                                  padding-left: 10px;
+                                                  text-align: center;
+                                                "
+                                              >
+                                                %%=v(@HouseOnMarketPropertyCount)=%%
+                                              </td>
+                                              <td
+                                                style="
+                                                  word-wrap: normal;
+                                                  padding-right: 10px;
+                                                  padding-left: 10px;
+                                                  text-align: center;
+                                                "
+                                              >
+                                                %%=v(@ApartmentOnMarketPropertyCount)=%%
+                                              </td>
+                                            </tr>
+                                            <tr style="height: 30px">
+                                              <td
+                                                style="
+                                                  padding-right: 10px;
+                                                  padding-left: 10px;
+                                                "
+                                              >
+                                                Number of properties sold
+                                              </td>
+                                              <td
+                                                style="
+                                                  word-wrap: normal;
+                                                  padding-right: 10px;
+                                                  padding-left: 10px;
+                                                  text-align: center;
+                                                "
+                                              >
+                                                %%=v(@SimilarHouseSoldCount)=%%
+                                              </td>
+                                              <td
+                                                style="
+                                                  word-wrap: normal;
+                                                  padding-right: 10px;
+                                                  padding-left: 10px;
+                                                  text-align: center;
+                                                "
+                                              >
+                                                %%=v(@SimilarApartmentSoldCount)=%%
+                                              </td>
+                                            </tr>
+                                          </table>
+                                          <tr>
+                                            <td
+                                              height="20"
+                                              style="
+                                                font-size: 1px;
+                                                line-height: 1px;
+                                                border-collapse: collapse;
+                                              "
+                                            >
+                                              <img
+                                                alt=""
+                                                border="0"
+                                                height="1"
+                                                src="http://image.exct.net/lib/fe6215707c62007e7512/m/1/5bf4439e-0942-4d78-9474-cbc1f0628c0d.gif"
+                                                style="
+                                                  display: block;
+                                                  border: 0px !important;
+                                                  outline: none !important;
+                                                "
+                                                width="1"
+                                              />
+                                            </td>
+                                          </tr>
+
+                                          <table
+                                            width="50%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="0"
+                                            role="presentation"
+                                          >
+                                            <tr>
+                                              <td>
+                                                <table
+                                                  border="0"
+                                                  cellspacing="0"
+                                                  cellpadding="0"
+                                                  role="presentation"
+                                                >
+                                                  <tr>
+                                                    <td
+                                                      class="innertd buttonblock"
+                                                      bgcolor="#0073CF"
+                                                      style="
+                                                        border-radius: 3px;
+                                                        -moz-border-radius: 3px;
+                                                        -webkit-border-radius: 3px;
+                                                        background-color: #0073cf;
+                                                      "
+                                                      align="right"
+                                                    >
+                                                      <a
+                                                        target="_blank"
+                                                        class="buttonstyles"
+                                                        style="
+                                                          font-size: 14px;
+                                                          font-family: Arial,
+                                                            Helvetica,
+                                                            sans-serif;
+                                                          color: #ffffff;
+                                                          text-align: center;
+                                                          text-decoration: none;
+                                                          display: block;
+                                                          background-color: #0073cf;
+                                                          border: 1px solid
+                                                            #0073cf;
+                                                          padding: 10px;
+                                                          border-radius: 3px;
+                                                          -moz-border-radius: 3px;
+                                                          -webkit-border-radius: 3px;
+                                                        "
+                                                        href="%%=RedirectTo(@PropertyURLDecode)=%%"
+                                                        title=""
+                                                        alias="View Property"
+                                                        conversion="false"
+                                                        data-linkto="http://"
+                                                        >View Property</a
+                                                      >
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                          <tr>
+                                            <td
+                                              height="20"
+                                              style="
+                                                font-size: 1px;
+                                                line-height: 1px;
+                                                border-collapse: collapse;
+                                              "
+                                            >
+                                              <img
+                                                alt=""
+                                                border="0"
+                                                height="1"
+                                                src="http://image.exct.net/lib/fe6215707c62007e7512/m/1/5bf4439e-0942-4d78-9474-cbc1f0628c0d.gif"
+                                                style="
+                                                  display: block;
+                                                  border: 0px !important;
+                                                  outline: none !important;
+                                                "
+                                                width="1"
+                                              />
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td
+                                              height="20"
+                                              style="
+                                                font-size: 1px;
+                                                line-height: 1px;
+                                                border-collapse: collapse;
+                                              "
+                                            >
+                                              <img
+                                                alt=""
+                                                border="0"
+                                                height="1"
+                                                src="http://image.exct.net/lib/fe6215707c62007e7512/m/1/5bf4439e-0942-4d78-9474-cbc1f0628c0d.gif"
+                                                style="
+                                                  display: block;
+                                                  border: 0px !important;
+                                                  outline: none !important;
+                                                "
+                                                width="1"
+                                              />
+                                            </td>
+                                          </tr>
+                                          %%[ NEXT @i]%%
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                              <tr>
+                                <td
+                                  height="20"
+                                  style="
+                                    font-size: 1px;
+                                    line-height: 1px;
+                                    border-collapse: collapse;
+                                  "
+                                >
+                                  <img
+                                    alt=""
+                                    border="0"
+                                    height="1"
+                                    src="http://image.exct.net/lib/fe6215707c62007e7512/m/1/5bf4439e-0942-4d78-9474-cbc1f0628c0d.gif"
+                                    style="
+                                      display: block;
+                                      border: 0px !important;
+                                      outline: none !important;
+                                    "
+                                    width="1"
+                                  />
+                                </td>
+                              </tr>
+                              <table
+                                cellpadding="0"
+                                cellspacing="0"
+                                width="100%"
+                                style="min-width: 100%"
+                                class="stylingblock-content-wrapper"
+                              >
+                                <tr>
+                                  <td
+                                    class="stylingblock-content-wrapper camarker-inner"
+                                  >
+                                    <table
+                                      bgcolor="#FFFFFF"
+                                      border="0"
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      style="
+                                        max-width: 650px;
+                                        background-color: #ffffff;
+                                      "
+                                      width="100%"
+                                    >
+                                      <tr>
+                                        <td
+                                          class="main_padding"
+                                          style="
+                                            padding-right: 25px;
+                                            padding-left: 25px;
+                                          "
+                                        >
+                                          <table
+                                            border="0"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            role="presentation"
+                                            width="90%"
+                                          >
+                                            <tr>
+                                              <td>
+                                                <p
+                                                  align="left"
+                                                  style="
+                                                    font-family: Arial,
+                                                      sans-serif;
+                                                    font-size: 14px;
+                                                    line-height: 22px;
+                                                    color: #000001;
+                                                    font-weight: normal;
+                                                  "
+                                                  valign="top"
+                                                >
+                                                  Thank you for choosing to stay
+                                                  informed with View.
+                                                </p>
+
+                                                <p
+                                                  align="left"
+                                                  style="
+                                                    font-family: Arial,
+                                                      sans-serif;
+                                                    font-size: 14px;
+                                                    line-height: 22px;
+                                                    color: #000001;
+                                                    font-weight: normal;
+                                                  "
+                                                  valign="top"
+                                                >
+                                                  Kind Regards,
+                                                </p>
+
+                                                <p
+                                                  align="left"
+                                                  style="
+                                                    font-family: Arial,
+                                                      sans-serif;
+                                                    font-size: 14px;
+                                                    line-height: 22px;
+                                                    color: #000001;
+                                                    font-weight: normal;
+                                                  "
+                                                  valign="top"
+                                                >
+                                                  The team at view.com.au
+                                                </p>
+                                                <p
+                                                  align="left"
+                                                  style="
+                                                    font-family: Arial,
+                                                      sans-serif;
+                                                    font-size: 14px;
+                                                    line-height: 22px;
+                                                    color: #000001;
+                                                    font-weight: normal;
+                                                  "
+                                                  valign="top"
+                                                >
+                                                  <i> N/A Not Available</i>
+                                                </p>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td
+                                                class="em_hide"
+                                                height="20"
+                                                style="
+                                                  font-size: 1px;
+                                                  line-height: 1px;
+                                                  border-collapse: collapse;
+                                                "
+                                              >
+                                                <img
+                                                  alt=""
+                                                  border="0"
+                                                  height="1"
+                                                  src="http://image.exct.net/lib/fe6215707c62007e7512/m/1/5bf4439e-0942-4d78-9474-cbc1f0628c0d.gif"
+                                                  style="
+                                                    display: block;
+                                                    border: 0px !important;
+                                                    outline: none !important;
+                                                  "
+                                                  width="1"
+                                                />
+                                              </td>
+                                            </tr>
+
+                                            <tr>
+                                              <td
+                                                height="20"
+                                                style="
+                                                  font-size: 1px;
+                                                  line-height: 1px;
+                                                  border-collapse: collapse;
+                                                "
+                                              >
+                                                <img
+                                                  alt=""
+                                                  border="0"
+                                                  height="1"
+                                                  src="http://image.exct.net/lib/fe6215707c62007e7512/m/1/5bf4439e-0942-4d78-9474-cbc1f0628c0d.gif"
+                                                  style="
+                                                    display: block;
+                                                    border: 0px !important;
+                                                    outline: none !important;
+                                                  "
+                                                  width="1"
+                                                />
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          style="min-width: 100%"
+                          class="stylingblock-content-wrapper"
+                        >
+                          <tr>
+                            <td
+                              class="stylingblock-content-wrapper camarker-inner"
+                            >
+                              <table
+                                bgcolor="#ffffff"
+                                border="0"
+                                cellpadding="0"
+                                cellspacing="0"
+                                style="
+                                  max-width: 650px;
+                                  background-color: #e1e1e1;
+                                "
+                                width="100%"
+                              >
+                                <tr>
+                                  <td
+                                    height="20"
+                                    style="
+                                      font-size: 1px;
+                                      line-height: 1px;
+                                      border-collapse: collapse;
+                                    "
+                                  >
+                                    <img
+                                      alt=""
+                                      border="0"
+                                      height="1"
+                                      src="http://image.exct.net/lib/fe6215707c62007e7512/m/1/5bf4439e-0942-4d78-9474-cbc1f0628c0d.gif"
+                                      style="
+                                        display: block;
+                                        border: 0px !important;
+                                        outline: none !important;
+                                      "
+                                      width="1"
+                                    />
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td
+                                    align="center"
+                                    class="paddingLR10"
+                                    style="
+                                      padding-left: 30px;
+                                      padding-right: 30px;
+                                    "
+                                  >
+                                    <table
+                                      border="0"
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      width="100%"
+                                    >
+                                      <tr>
+                                        <td
+                                          height="10"
+                                          style="
+                                            font-size: 1px;
+                                            line-height: 1px;
+                                            border-collapse: collapse;
+                                          "
+                                        >
+                                          <img
+                                            alt=""
+                                            border="0"
+                                            height="1"
+                                            src="http://image.exct.net/lib/fe6215707c62007e7512/m/1/5bf4439e-0942-4d78-9474-cbc1f0628c0d.gif"
+                                            style="
+                                              display: block;
+                                              border: 0px !important;
+                                              outline: none !important;
+                                            "
+                                            width="1"
+                                          />
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <table
+                                            align="center"
+                                            border="0"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            class="table_responsive"
+                                            width="600"
+                                          >
+                                            <tr>
+                                              <td align="center">
+                                                <table
+                                                  align="center"
+                                                  border="0"
+                                                  cellpadding="0"
+                                                  cellspacing="0"
+                                                  class="table_responsive"
+                                                  width="300"
+                                                >
+                                                  <tr>
+                                                    <td align="center" style="">
+                                                      <a
+                                                        alias="Facebook"
+                                                        conversion="false"
+                                                        data-linkto="https://"
+                                                        href="https://www.facebook.com/realestateview/?utm_source=EDMl&utm_medium=email&utm_campaign=emailfooter"
+                                                        target="_blank"
+                                                        title="Facebook"
+                                                        ><img
+                                                          alt="Facebook"
+                                                          data-assetid="78785"
+                                                          height="20"
+                                                          src="http://image.email.realestateview.com.au/lib/fe39157075640474771175/m/1/607c6a38-cbea-4dcf-a6ac-22b6ba014fee.png"
+                                                          style="
+                                                            max-width: 20px;
+                                                            height: 20px;
+                                                            padding: 0px;
+                                                            text-align: center;
+                                                            width: 20px;
+                                                            outline: none !important;
+                                                            border: 0px;
+                                                          "
+                                                          width="20"
+                                                      /></a>
+                                                    </td>
+                                                    <td align="center" style="">
+                                                      <a
+                                                        alias="Instagram"
+                                                        conversion="false"
+                                                        data-linkto="https://"
+                                                        href="https://www.instagram.com/realestateview/?utm_source=EDMl&utm_medium=email&utm_campaign=emailfooter"
+                                                        target="_blank"
+                                                        title="Instagram"
+                                                        ><img
+                                                          alt="Instagram"
+                                                          data-assetid="78786"
+                                                          height="20"
+                                                          src="http://image.email.realestateview.com.au/lib/fe39157075640474771175/m/1/d26b917c-9fde-400b-813f-7cf2d8d24a8e.png"
+                                                          style="
+                                                            max-width: 20px;
+                                                            height: 20px;
+                                                            padding: 0px;
+                                                            text-align: center;
+                                                            width: 20px;
+                                                            outline: none !important;
+                                                            border: 0px;
+                                                          "
+                                                          width="20"
+                                                      /></a>
+                                                    </td>
+                                                    <td align="center" style="">
+                                                      <a
+                                                        alias="Pinterest"
+                                                        conversion="false"
+                                                        data-linkto="https://"
+                                                        href="https://www.pinterest.com.au/realestateview/?utm_source=EDMl&utm_medium=email&utm_campaign=emailfooter"
+                                                        target="_blank"
+                                                        title="Pinterest"
+                                                        ><img
+                                                          alt="Pinterest"
+                                                          data-assetid="78787"
+                                                          height="20"
+                                                          src="http://image.email.realestateview.com.au/lib/fe39157075640474771175/m/1/bfde465f-cba6-4d28-9cfa-15c9b65582d0.png"
+                                                          style="
+                                                            max-width: 20px;
+                                                            height: 20px;
+                                                            padding: 0px;
+                                                            text-align: center;
+                                                            width: 20px;
+                                                            outline: none !important;
+                                                            border: 0px;
+                                                          "
+                                                          width="20"
+                                                      /></a>
+                                                    </td>
+                                                    <td align="center">
+                                                      <a
+                                                        alias="LinkedIn"
+                                                        conversion="false"
+                                                        data-linkto="https://"
+                                                        href="https://www.linkedin.com/company/realestateview?utm_source=EDMl&utm_medium=email&utm_campaign=emailfooter"
+                                                        target="_blank"
+                                                        title="LinkedIn"
+                                                        ><img
+                                                          alt="LinkedIn"
+                                                          data-assetid="78788"
+                                                          height="20"
+                                                          src="http://image.email.realestateview.com.au/lib/fe39157075640474771175/m/1/d34fda09-c356-42c5-8238-d6c3a7bcdd17.png"
+                                                          style="
+                                                            max-width: 20px;
+                                                            height: 20px;
+                                                            padding: 0px;
+                                                            width: 20px;
+                                                            outline: none !important;
+                                                            border: 0px;
+                                                            text-align: center;
+                                                          "
+                                                          width="20"
+                                                      /></a>
+                                                    </td>
+                                                    <!--<td align="right" style="font-family: Arial, sans-serif; font-size: 11px; line-height: 16px; color:#000001;">
+                                                                                            <a alias="News" class="nounderline_black" conversion="false" href="https://www.realestateview.com.au/blog/" style="color:#000001; text-decoration:none;" title="">News</a>
+                                                                                        </td>
+                                                                                        <td align="right" style="font-family: Arial, sans-serif; font-size: 11px; line-height: 16px; color:#000001;">
+                                                                                            <a alias="Advice Centre" class="nounderline_black" conversion="false" href="https://www.realestateview.com.au/advice/" style="color:#000001; text-decoration:none;" title="">Advice Centre</a>
+                                                                                        </td>-->
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td
+                                          height="20"
+                                          style="
+                                            font-size: 1px;
+                                            line-height: 1px;
+                                            border-collapse: collapse;
+                                          "
+                                        >
+                                          <img
+                                            alt=""
+                                            border="0"
+                                            height="1"
+                                            src="http://image.exct.net/lib/fe6215707c62007e7512/m/1/5bf4439e-0942-4d78-9474-cbc1f0628c0d.gif"
+                                            style="
+                                              display: block;
+                                              border: 0px !important;
+                                              outline: none !important;
+                                            "
+                                            width="1"
+                                          />
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td
+                                          height="20"
+                                          style="
+                                            font-size: 1px;
+                                            line-height: 1px;
+                                            border-collapse: collapse;
+                                          "
+                                        >
+                                          <img
+                                            alt=""
+                                            border="0"
+                                            height="1"
+                                            src="http://image.exct.net/lib/fe6215707c62007e7512/m/1/5bf4439e-0942-4d78-9474-cbc1f0628c0d.gif"
+                                            style="
+                                              display: block;
+                                              border: 0px !important;
+                                              outline: none !important;
+                                            "
+                                            width="1"
+                                          />
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="center">
+                                          <table
+                                            border="0"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            class="table_responsive"
+                                            id="Table5"
+                                            width="600"
+                                          >
+                                            <tr>
+                                              <td align="center">
+                                                <font
+                                                  color="#000001"
+                                                  face="verdana"
+                                                  size="1"
+                                                  >This email was sent by:
+                                                  <b>%%Member_Busname%%</b
+                                                  ><br />
+                                                  %%Member_Addr%%
+                                                  %%Member_City%%,
+                                                  %%Member_State%%,
+                                                  %%Member_PostalCode%%,
+                                                  %%Member_Country%%</font
+                                                ><br />
+                                                <br />
+                                                &nbsp;
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td
+                                          height="20"
+                                          style="
+                                            font-size: 1px;
+                                            line-height: 1px;
+                                            border-collapse: none;
+                                          "
+                                        >
+                                          <img
+                                            alt=""
+                                            border="0"
+                                            height="1"
+                                            src="http://image.exct.net/lib/fe6215707c62007e7512/m/1/5bf4439e-0942-4d78-9474-cbc1f0628c0d.gif"
+                                            style="
+                                              display: block;
+                                              border: 0px !important;
+                                              outline: none !important;
+                                            "
+                                            width="1"
+                                          />
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <!-- Email Body : END -->
+
+                    <!-- Email Footer : BEGIN -->
+
+                    <!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]-->
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </center>
+    <custom name="opencounter" type="tracking" />
+  </body>
+</html>
